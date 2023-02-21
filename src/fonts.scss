@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/src/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century-Gothic';
+    src: url('/src/fonts/centurygothic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin fonts($family, $weight, $size, $line_height) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line_height;
+}
+
+.navigation__list {
+    @include fonts('Montserrat', 500, 16px, 21.6px);
+}
+
+.main-header__title {
+    @include fonts('Century-Gothic', 700, 14px, 20.3px);
+}
+
+.main-search__header {
+    @include fonts('Montserrat', 700, 28px, 34.13px);
+}
+
+.main-search__text {
+    @include fonts('Montserrat', 600, 16px, 19.5px);
+}
+
+.form-about__input {
+    @include fonts('Montserrat', 500, 12px, 15px);
+}
+
+.main-content__author {
+    @include fonts('Montserrat', 500, 10px, 12.5px);
+}
+
+.main-content__title {
+    @include fonts('Century-Gothic', 700, 18px, 22.5px);
+}
+
+.content-size-s__title {
+    @include fonts('Century-Gothic', 700, 16px, 20px);
+}
+
+.main-content__description {
+    @include fonts('Montserrat', 400, 16px, 20px);
+}
+
+.content-size-s__description {
+    @include fonts('Montserrat', 400, 12px, 15px);
+}
+
+.content-size-m_header--upper-case {
+    @include fonts('Montserrat', 700, 47px, 57.29px);
+}
+
+.content-size-m__header {
+    @include fonts('Montserrat', 700, 21px, 26.25px);
+}
+
+.content-size-m__description {
+    @include fonts('Montserrat', 600, 16px, 20px);
+}
+
+.content-size-m__input {
+    @include fonts('Montserrat', 500, 12px, 15px);
+}
+
+.content-size-m__submit {
+    @include fonts('Montserrat', 600, 14px, 17.5px);
+}
+
+.author__label {
+    @include fonts('Montserrat', 600, 12px, 15px);
+}
+
+.author__name {
+    @include fonts('Montserrat', 600, 16px, 20px);
+}
+
+.author__text {
+    @include fonts('Montserrat', 400, 14px, 17.5px);
+}
+
+.footer-navigation__title {
+    @include fonts('Century-Gothic', 700, 16px, 19.62px);
+}
+
+.footer-requisites__title,
+.socials__title {
+    @include fonts('Century-Gothic', 700, 16px, 34.4px);
+}
+
+.footer-navigation__list {
+    @include fonts('Montserrat', 400, 14px, 31.5px);
+}
+
+.footer-requisites__name,
+.footer-requisites__value {
+    @include fonts('Montserrat', 400, 14px, 17.5px);
+}
+
+.footer-document-politic--link,
+.footer-document__copyright {
+    @include fonts('Montserrat', 400, 12px, 15px);
+}

@@ -1,0 +1,155 @@
+// 1. Почему то не работает woff2 формат шрифтов.
+// 2. Нужно сделать миксины на посты
+// 3. Сделать что то с цветом ссылок в футере (они не должны быть такого же цвета , как в хедере)
+// 4. Разобраться как поставить background-image для постов одинакового размера
+
+
+.header {
+    background-color: #FFFFFF;
+}
+
+.main {
+    background-color: #E5E5E5;
+}
+
+.footer {
+    background-color: #FFFFFF;
+}
+
+// Сделать миксин на посты
+
+.main-search {
+    background: url('./assets/images/Consulting.svg');
+    background-repeat: no-repeat;
+}
+
+.main-content.content-size-l {
+    background-image: url('./assets/images/CarBackground.svg');
+    background-repeat: no-repeat;
+}
+
+.main-content.review {
+    background-image: url('./assets/images/ReviewBackground.svg');
+    background-repeat: no-repeat;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/ttf/Montserrat-VariableFont_wght.ttf') format('truetype'); 
+    // url('/src/fonts/woff2/montserrat-variablefont_wght-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century-Gothic';
+    src: url('./fonts/ttf/centurygothic.ttf') format('truetype'); 
+    // url('/src/fonts/woff2/centurygothic-webfont.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin fonts($family, $weight, $size, $line_height, $color) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $line_height;
+    color: $color
+}
+
+.navigation__link {
+    @include fonts('Montserrat', 500, 16px, 21.6px, #3B1788);
+}
+
+.main-header__title {
+    @include fonts('Century-Gothic', 700, 14px, 20.3px, #FFFFFF);
+}
+
+.main-search__header {
+    @include fonts('Montserrat', 700, 28px, 34.13px, #1D0B44);
+}
+
+.main-search__text {
+    @include fonts('Montserrat', 600, 16px, 19.5px, #032E47);
+}
+
+.form-about__input {
+    @include fonts('Montserrat', 500, 12px, 15px, #B4B4CC);
+}
+
+.main-content__author {
+    @include fonts('Montserrat', 500, 10px, 12.5px, #3B1788);
+}
+
+.main-content__title {
+    @include fonts('Century-Gothic', 700, 18px, 22.5px, #FFFFFF);
+}
+
+.content-size-s__title {
+    @include fonts('Century-Gothic', 700, 16px, 20px, #FFFFFF);
+}
+
+.main-content__description {
+    @include fonts('Montserrat', 400, 16px, 20px, #FFFFFF);
+}
+
+.content-size-s__description {
+    @include fonts('Montserrat', 400, 12px, 15px, #FFFFFF);
+}
+
+.content-size-m_header--upper-case {
+    @include fonts('Montserrat', 700, 47px, 57.29px, #FFFFFF);
+}
+
+.content-size-m__header {
+    @include fonts('Montserrat', 700, 21px, 26.25px, #FFFFFF);
+}
+
+.content-size-m__description {
+    @include fonts('Montserrat', 600, 16px, 20px, #FFFFFF);
+}
+
+.content-size-m__input {
+    @include fonts('Montserrat', 500, 12px, 15px, #B4B4CC);
+}
+
+.content-size-m__submit {
+    @include fonts('Montserrat', 600, 14px, 17.5px, #FFFFFF);
+}
+
+.review__label {
+    @include fonts('Montserrat', 600, 12px, 15px, #1D0B44);
+}
+
+.review__author {
+    @include fonts('Montserrat', 600, 16px, 20px, #1D0B44);
+}
+
+.review__text {
+    @include fonts('Montserrat', 400, 14px, 17.5px, #1D0B44);
+}
+
+.footer-navigation__title {
+    @include fonts('Century-Gothic', 700, 16px, 19.62px, #1D0B44);
+}
+
+.footer-requisites__title,
+.socials__title {
+    @include fonts('Century-Gothic', 700, 16px, 34.4px, #1D0B44);
+}
+
+// Тут берется цвет из ссылок, которые в хедере
+.footer-navigation__list {
+    @include fonts('Montserrat', 400, 14px, 31.5px, #1D0B44);
+}
+
+.footer-requisites__name,
+.footer-requisites__value {
+    @include fonts('Montserrat', 400, 14px, 17.5px, #1D0B44);
+}
+
+.footer-document-politic--link,
+.footer-document__copyright {
+    @include fonts('Montserrat', 400, 12px, 15px, #3B1788);
+}
